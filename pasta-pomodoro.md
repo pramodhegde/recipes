@@ -76,21 +76,23 @@
 ```mermaid
 gantt
     title Pasta Recipe Timing Diagram
+
     dateFormat  HH:mm
+    axisFormat  %H:%M
     section Sauce Preparation
-    Garlic & Peperoncino in oil:           00:00, 00:02
-    Chop Tomatoes:                        00:02, 00:04
-    Tomato Sauce Cooking:                 00:04, 00:22
-    Add Basil & Salt to Sauce:            00:22, 00:24
-    Blend Sauce:                          00:24, 00:26
+    Garlic & Peperoncino in oil:       00:00, 00:02  done  t("Cook garlic & peperoncino in oil")
+    Chop Tomatoes:                     00:02, 00:04  done  t("Chop tomatoes")
+    Tomato Sauce Cooking:              00:04, 00:22  active  t("Cook tomato sauce")
+    Add Basil & Salt to Sauce:         00:22, 00:24  done  t("Add basil and salt to sauce")
+    Blend Sauce:                       00:24, 00:26  done  t("Blend sauce")
 
     section Pasta Cooking
-    Bring Water to Boil:                  00:04, 00:09
-    Cook Pasta (Until Al Dente):          00:09, 00:16
-    Reserve Pasta Water:                  00:09, 00:10
+    Bring Water to Boil:               00:04, 00:09  done  t("Bring water to a boil")
+    Cook Pasta (Until Al Dente):       00:09, 00:16  active  t("Cook pasta until al dente")
+    Reserve Pasta Water:               00:09, 00:10  done  t("Reserve pasta water")
 
     section Combine Sauce & Pasta
-    Add Pasta Water to Sauce:            00:15, 00:16
-    Combine Pasta and Sauce:             00:16, 00:19
-    Add Parmigiano & Serve:              00:19, 00:21
+    Add Pasta Water to Sauce:          00:15, 00:16  done  t("Add pasta water to sauce")
+    Combine Pasta and Sauce:           00:16, 00:19  active  t("Combine pasta and sauce")
+    Add Parmigiano & Serve:            00:19, 00:21  done  t("Add parmigiano and serve")
 ```
