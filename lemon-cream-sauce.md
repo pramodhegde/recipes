@@ -59,20 +59,22 @@
 ```mermaid
 gantt
     title Lemon Cream Sauce Recipe Timing Diagram
+    
     dateFormat  HH:mm
+    axisFormat  %H:%M
     section Aromatic Preparation
-    Chop Garlic & Shallots:            00:00, 00:05
-    Zest Lemons:                       00:05, 00:10
+    Chop Garlic & Shallots:            00:00, 00:05  done  t("Chop garlic & shallots")
+    Zest Lemons:                       00:05, 00:10  done  t("Zest lemons")
 
     section Cooking Sauce
-    Melt Butter & Sauté Aromatics:     00:10, 00:14
-    Deglaze with Wine & Vinegar:       00:14, 00:20
-    Reduce Liquid:                     00:20, 00:27
-    Add Cream & Lemon Zest:            00:27, 00:32
-    Simmer to Thicken:                 00:32, 00:40
+    Melt Butter & Sauté Aromatics:     00:10, 00:14  done  t("Melt butter & sauté aromatics")
+    Deglaze with Wine & Vinegar:       00:14, 00:20  done  t("Deglaze with wine & vinegar")
+    Reduce Liquid:                     00:20, 00:27  active  t("Reduce liquid")
+    Add Cream & Lemon Zest:            00:27, 00:32  active  t("Add cream and lemon zest")
+    Simmer to Thicken:                 00:32, 00:40  active  t("Simmer to thicken")
 
     section Finalizing
-    Taste & Adjust Seasoning:          00:40, 00:42
-    Strain Sauce (Optional):           00:42, 00:45
-    Serve:                             00:45, 00:50
+    Taste & Adjust Seasoning:          00:40, 00:42  done  t("Taste & adjust seasoning")
+    Strain Sauce (Optional):           00:42, 00:45  done  t("Strain sauce (optional)")
+    Serve:                             00:45, 00:50  done  t("Serve")
 ```
