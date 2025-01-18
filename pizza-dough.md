@@ -64,19 +64,19 @@ gantt
     dateFormat  HH:mm
     axisFormat  %H:%M
     section Mixing & Kneading
-    Mix Dry & Wet Ingredients:         00:00, 00:10  done  t("Mixing dry and wet ingredients")
-    Knead Dough:                       00:10, 00:20  done  t("Knead dough")
+    Mix Dry & Wet Ingredients            :done,    t1, 00:00, 00:10
+    Knead Dough                          :done,    t2, 00:10, 00:20
 
     section Resting
-    Rest (First):                      00:20, 00:50  active  t("First resting period")
-    Knead Again:                       00:50, 01:00  done  t("Knead again")
-    Rest (Second):                     01:00, 04:00  active  t("Second resting period")
-    Portion & Ball Dough:              04:00, 04:10  done  t("Portion into 200g balls")
-    Rest (Third - Room Temp):          04:10, 12:10  active  t("Room temperature resting")
-    Refrigerate:                       12:10, 12:15  done  t("Refrigerate dough")
+    Rest (First)                         :active,  t3, 00:20, 00:50
+    Knead Again                          :done,    t4, 00:50, 01:00
+    Rest (Second)                        :active,  t5, 01:00, 04:00
+    Portion & Ball Dough                 :done,    t6, 04:00, 04:10
+    Rest (Third - Room Temp)            :active,  t7, 04:10, 12:10
+    Refrigerate                          :done,    t8, 12:10, 12:15
 
     section Shaping & Cooking
-    Shape Dough:                       12:15, 12:30  active  t("Shape dough")
-    Build Pizza:                       12:30, 12:40  done  t("Build pizza")
-    Preheat Oven:                      12:00, 13:00  active  t("Preheat oven")
+    Shape Dough                          :active,  t9, 12:15, 12:30
+    Build Pizza                          :done,    t10, 12:30, 12:40
+    Preheat Oven                         :active,  t11, 12:00, 13:00
 ```
