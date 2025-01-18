@@ -54,19 +54,22 @@
 
 ---
 
-## Sequence Diagram
+## Timing Diagram
 
 ```mermaid
-graph TD
-    A[Start: Toast Spices] --> B[Add Olive Oil, Garlic, Onion, and Salt]
-    B --> C[Cook Aromatics]
-    C --> D[Stir in Tomato Paste]
-    D --> E[Add Urfa Biber or Aleppo Pepper]
-    E --> F[Cook for 1 Minute]
-    F --> G[Add Red Wine Vinegar]
-    G --> H[Cook for 2 Minutes]
-    H --> I[Blend in Food Processor]
-    I --> J[Store in Glass Container]
-    J[End: Refrigerate]
-```
+gantt
+title Harissa Preparation Timing
 
+dateFormat  HH:mm
+axisFormat  %H:%M
+section Toast Spices
+Toast cumin, coriander, and caraway seeds       :done,    t1, 00:00, 00:05
+section Sauté Aromatics
+Cook garlic, onion, and salt in olive oil       :active,  t2, 00:03, 00:08
+section Add Tomato Paste and Peppers
+Mix tomato paste and Urfa Biber                 :active,  t3, 00:07, 00:09
+section Add Vinegar
+Stir in red wine vinegar                        :done,    t4, 00:09, 00:11
+section Blend and Store
+Blend in food processor and refrigerate         :done,    t5, 00:11, 00:13
+```
